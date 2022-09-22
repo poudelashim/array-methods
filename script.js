@@ -81,5 +81,56 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const arr = ['a', 'b', 'c', 'd', 'e'];
 console.log(arr.slice(2));
 console.log(arr.slice(2, 4));
+console.log(arr.slice(1, -2));
+console.log(arr.slice(-3));
+console.log(arr.slice([...arr]));
+console.log(
+  '----------------------------------------------------------------------------------------------'
+);
+//2.Splice
 
-//
+// console.log(arr.splice(2));
+// console.log(arr.splice(-1));
+// console.log(arr);
+
+// const months = ['Jan', 'March', 'April', 'June'];
+// console.log(months.splice(1, 0, 'Feb'));
+// console.log(months);
+
+// console.log(months.splice(4, 1, 'May'));
+// console.log(months);
+
+const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+
+// remove 0 elements before index 2, and insert drum
+
+// console.log(myFish.splice(2, 0, 'drum'));
+// console.log(myFish);
+
+//remove 0 elements before index 2, and insert drum and guitar
+
+console.log(myFish.splice(2, 0, 'drum', 'guitar'));
+console.log(myFish);
+
+//remove 1 element at index 3
+console.log(myFish.splice(3, 1));
+
+//remove 1 element at index 2, and insert trumpet
+console.log(myFish.splice(2, 1, 'trumpet'));
+console.log(myFish);
+
+//remove 2 elements from index 0 and insert parrot, anemone, blue
+console.log(myFish.splice(0, 2, 'parrot', 'anemone', 'blue'));
+console.log(myFish);
+
+//remove 2 elements, starting from index 2
+console.log(myFish.splice(2, 2));
+console.log(myFish);
+
+//remove 1 elements starting from index -2
+console.log(myFish.splice(-2, 1));
+console.log(myFish);
+
+//remove all elements, starting form index 1
+console.log(myFish.splice(1));
+console.log(myFish);
