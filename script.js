@@ -73,20 +73,40 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-/////////////////////////////////////////////////
+for (const movement of movements) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You deposited ${Math.abs(movement)}`);
+  }
+}
+console.log(
+  '---------------------------FOR EACH METHOD------------------------------------------------'
+);
+//for each method
+
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}:You deposited ${mov}`);
+  } else {
+    console.log(`Movement ${i + 1}:You withdrew ${Math.abs(mov)}`);
+  }
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //METHODS
 
 //1. Slice
-const arr = ['a', 'b', 'c', 'd', 'e'];
-console.log(arr.slice(2));
-console.log(arr.slice(2, 4));
-console.log(arr.slice(1, -2));
-console.log(arr.slice(-3));
-console.log(arr.slice([...arr]));
-console.log(
-  '----------------------------------------------------------------------------------------------'
-);
+// const arr = ['a', 'b', 'c', 'd', 'e'];
+// console.log(arr.slice(2));
+// console.log(arr.slice(2, 4));
+// console.log(arr.slice(1, -2));
+// console.log(arr.slice(-3));
+// console.log(arr.slice([...arr]));
+// console.log(
+//   '----------------------------------------------------------------------------------------------'
+// );
 //2.Splice
 
 // console.log(arr.splice(2));
@@ -100,7 +120,7 @@ console.log(
 // console.log(months.splice(4, 1, 'May'));
 // console.log(months);
 
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+// const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 
 // remove 0 elements before index 2, and insert drum
 
@@ -109,28 +129,42 @@ const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 
 //remove 0 elements before index 2, and insert drum and guitar
 
-console.log(myFish.splice(2, 0, 'drum', 'guitar'));
-console.log(myFish);
+// console.log(myFish.splice(2, 0, 'drum', 'guitar'));
+// console.log(myFish);
 
-//remove 1 element at index 3
-console.log(myFish.splice(3, 1));
+// //remove 1 element at index 3
+// console.log(myFish.splice(3, 1));
 
-//remove 1 element at index 2, and insert trumpet
-console.log(myFish.splice(2, 1, 'trumpet'));
-console.log(myFish);
+// //remove 1 element at index 2, and insert trumpet
+// console.log(myFish.splice(2, 1, 'trumpet'));
+// console.log(myFish);
 
-//remove 2 elements from index 0 and insert parrot, anemone, blue
-console.log(myFish.splice(0, 2, 'parrot', 'anemone', 'blue'));
-console.log(myFish);
+// //remove 2 elements from index 0 and insert parrot, anemone, blue
+// console.log(myFish.splice(0, 2, 'parrot', 'anemone', 'blue'));
+// console.log(myFish);
 
-//remove 2 elements, starting from index 2
-console.log(myFish.splice(2, 2));
-console.log(myFish);
+// //remove 2 elements, starting from index 2
+// console.log(myFish.splice(2, 2));
+// console.log(myFish);
 
-//remove 1 elements starting from index -2
-console.log(myFish.splice(-2, 1));
-console.log(myFish);
+// //remove 1 elements starting from index -2
+// console.log(myFish.splice(-2, 1));
+// console.log(myFish);
 
-//remove all elements, starting form index 1
-console.log(myFish.splice(1));
-console.log(myFish);
+// //remove all elements, starting form index 1
+// console.log(myFish.splice(1));
+// console.log(myFish);
+
+// //reverse
+// const arr1 = ['a', 'b', 'c', 'd', 'e'];
+// const arr2 = ['j', 'i', 'h', 'g', 'f'];
+// console.log(arr2.reverse());
+// console.log(arr2);
+
+// //concat
+// const letters = arr.concat(arr2);
+// console.log(letters);
+// console.log([...arr1, ...arr2]);
+
+// //join
+// console.log(letters.join('-'));
