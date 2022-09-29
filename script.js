@@ -227,6 +227,23 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
+//SOLUTION #1
+const checkDogs = function (dogsJulia, dogsKate) {
+  const dogsJuliaCorrected = dogsJulia.slice(); //break down the array
+  dogsJuliaCorrected.splice(0, 1); //removing the first two data
+  dogsJuliaCorrected.splice(-2); //removing the last two data
+  const dogs = dogsJuliaCorrected.concat(dogsKate); //joining the Julia's dogs and Kate's dogs
+  console.log(dogs);
+
+  dogs.forEach(function (dog, i) {
+    if (dog >= 3) {
+      console.log(`Dog number ${i + 1} is an adult, and is ${dog} years old`);
+    } else console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+  });
+};
+
+checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+
 // Coding Challenge #2
 
 /* 
