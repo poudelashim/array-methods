@@ -10,6 +10,7 @@ const account1 = {
   pin: 1111,
 };
 
+const eurToUsd
 const account2 = {
   owner: 'Anish Poudel',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
@@ -207,7 +208,7 @@ console.log(containerMovements.innerHTML);
 // //join
 // console.log(letters.join('-'));
 
-// Coding Challenge #1
+// CODING CHALLENGE  #1
 
 /* 
 Julia and Kate are doing a study on dogs. So each of them asked 5 dog owners about their dog's age, and stored the data into an array (one array for each). For now, they are just interested in knowing whether a dog is an adult or a puppy. A dog is an adult if it is at least 3 years old, and it's a puppy if it's less than 3 years old.
@@ -228,22 +229,29 @@ GOOD LUCK 😀
 */
 
 //SOLUTION #1
-const checkDogs = function (dogsJulia, dogsKate) {
-  const dogsJuliaCorrected = dogsJulia.slice(); //break down the array
-  dogsJuliaCorrected.splice(0, 1); //removing the first two data
-  dogsJuliaCorrected.splice(-2); //removing the last two data
-  const dogs = dogsJuliaCorrected.concat(dogsKate); //joining the Julia's dogs and Kate's dogs
-  console.log(dogs);
+// const checkDogs = function (dogsJulia, dogsKate) {
+//   const dogsJuliaCorrected = dogsJulia.slice(); //break down the array
+//   dogsJuliaCorrected.splice(0, 1); //removing the first two data
+//   dogsJuliaCorrected.splice(-2); //removing the last two data
+//   const dogs = dogsJuliaCorrected.concat(dogsKate); //joining the Julia's dogs and Kate's dogs
+//   console.log(dogs);
 
-  dogs.forEach(function (dog, i) {
-    if (dog >= 3) {
-      console.log(`Dog number ${i + 1} is an adult, and is ${dog} years old`);
-    } else console.log(`Dog number ${i + 1} is still a puppy 🐶`);
-  });
-};
+//   dogs.forEach(function (dog, i) {
+//     if (dog >= 3) {
+//       console.log(`Dog number ${i + 1} is an adult, and is ${dog} years old`);
+//     } else console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+//   });
+// };
 
-// checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
-checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+// // checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+// checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+
+/* 3 ARRAY METHODS
+ MAPS , FILTER, REDUCE
+*/
+
+
+
 
 // Coding Challenge #2
 
