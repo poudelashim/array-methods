@@ -10,7 +10,6 @@ const account1 = {
   pin: 1111,
 };
 
-const eurToUsd
 const account2 = {
   owner: 'Anish Poudel',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
@@ -249,9 +248,20 @@ GOOD LUCK 😀
 /* 3 ARRAY METHODS
  MAPS , FILTER, REDUCE
 */
+const movements = [300, 200, 4000, 50000, 12000];
+const eurToUsd = 1.1;
+const movementsUsd = movements.map(mov => mov * eurToUsd);
 
+console.log(movements);
+console.log(movementsUsd);
 
-
+const movementDescriptions = movements.map(
+  (mov, i) =>
+    `Movement ${i + 1}:You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+      mov
+    )}`
+);
+console.log(movementDescriptions);
 
 // Coding Challenge #2
 
