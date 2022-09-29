@@ -34,7 +34,7 @@ const account5 = {
   owner: 'Ashma Pyakurel',
   movements: [4300, 1000, 7000, 5000, 9000],
   interestRate: 1,
-  pin: 0000,
+  pin: 1234,
 };
 const accounts = [account1, account2, account3, account4, account5];
 
@@ -80,7 +80,22 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
-console.log(containerMovements.innerHTML);
+
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name)
+      .join('');
+  });
+};
+createUsernames(accounts);
+console.log(accounts);
+// console.log(createUsernames('Ashma Pyakurel'));
+// console.log(createUsernames('Anish Poudel'));
+// console.log(createUsernames('Preetha Pradhan'));
+// console.log(createUsernames('Dipen Lamichhane'));
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -248,20 +263,20 @@ GOOD LUCK 😀
 /* 3 ARRAY METHODS
  MAPS , FILTER, REDUCE
 */
-const movements = [300, 200, 4000, 50000, 12000];
-const eurToUsd = 1.1;
-const movementsUsd = movements.map(mov => mov * eurToUsd);
+// const movements = [300, 200, 4000, 50000, 12000];
+// const eurToUsd = 1.1;
+// const movementsUsd = movements.map(mov => mov * eurToUsd);
 
-console.log(movements);
-console.log(movementsUsd);
+// console.log(movements);
+// console.log(movementsUsd);
 
-const movementDescriptions = movements.map(
-  (mov, i) =>
-    `Movement ${i + 1}:You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
-      mov
-    )}`
-);
-console.log(movementDescriptions);
+// const movementDescriptions = movements.map(
+//   (mov, i) =>
+//     `Movement ${i + 1}:You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+//       mov
+//     )}`
+// );
+// console.log(movementDescriptions);
 
 // Coding Challenge #2
 
